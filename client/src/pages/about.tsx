@@ -57,15 +57,11 @@ const AboutPage = () => {
       <div className="">
 
         <div className="text-center mb-12">
-          {/* <h1 className="text-4xl font-heading font-bold mb-4">About Mooropan</h1> */}
           <Title
             title={'About Mooropan'}
             titleClassname={'text-[var(--clr-orange)]'}
           />
-          {/* <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            A trusted name in cattle nutrition for over two decades, delivering premium
-            quality feed solutions that help farmers maximize their livestock's health and productivity.
-          </p> */}
+          
         </div>
 
         {/* Our Story Section */}
@@ -107,6 +103,31 @@ const AboutPage = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
+          </div>
+        </div>
+
+        
+        <div className="max-w-[var(--page-container-max-w)] mx-auto mt-12 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="text-left space-y-6 pt-8 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
+              <h3 className="text-2xl font-bold text-[var(--clr-orange)]">Our Mission</h3>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                At MooRopan, we are dedicated to revolutionizing cattle healthcare through innovative and sustainable solutions. Our mission is to empower farmers with accessible, high-quality healthcare products and expert guidance, ensuring the optimal health and productivity of their livestock.
+              </p>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                We strive to be the catalyst for positive change in the agricultural sector, promoting practices that benefit both farmers and their cattle while maintaining the highest standards of quality and care.
+              </p>
+            </div>
+
+            <div className="text-left space-y-6 pt-8 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
+              <h3 className="text-2xl font-bold text-[var(--clr-blue)]">Our Vision</h3>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                We envision a future where every farmer in India has access to advanced cattle healthcare solutions, supported by cutting-edge technology and expert knowledge. Our goal is to create a sustainable ecosystem where traditional wisdom meets modern innovation.
+              </p>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                Through our commitment to "Gau-swasthayam Rakshatu", we aim to set new standards in cattle healthcare, fostering a healthier, more productive agricultural community while preserving and enhancing traditional farming values.
+              </p>
+            </div>
           </div>
         </div>
 

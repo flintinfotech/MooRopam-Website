@@ -47,7 +47,7 @@ const About = () => {
           </div>
           
           <div className="order-1 lg:order-2 grids grid-cols-s2 relative gap-4">
-          <iframe
+            <iframe
               className="rounded-lg col-spasn-2 h-80 w-full"
               src="https://www.youtube.com/embed/4QqkWmI_kX0"
               title="YouTube video"

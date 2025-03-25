@@ -17,6 +17,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import ContactForm from "./ContactForm";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Name is required" }),
@@ -65,13 +66,13 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 bg-white">
+    <section id="contact" className="py-16 bg-white max-w-[var(--page-container-max-w)] mx-auto">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           <div className="lg:col-span-2">
             <h2 className="text-3xl font-heading font-bold mb-4">Contact Us</h2>
             <p className="text-lg mb-8">
-              Have questions about our products or need advice on the best feeding solution for your herd? Our team of experts is here to help.
+            We would love to connect with you! Please fill out the form below or email us directly at our email to get in touch.
             </p>
             
             <div className="space-y-6">
@@ -81,7 +82,9 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-heading font-semibold mb-1">Email Us</h3>
-                  <p className="text-muted-foreground">info@nutrigraze.com</p>
+                  <p className="text-muted-foreground">
+                    <a href="mailto:info@mooropan.com">info@mooropan.com</a>
+                  </p>
                   <p className="text-sm text-muted-foreground/70">Typical response time: 24 hours</p>
                 </div>
               </div>
@@ -92,8 +95,10 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-heading font-semibold mb-1">Call Us</h3>
-                  <p className="text-muted-foreground">(555) 123-4567</p>
-                  <p className="text-sm text-muted-foreground/70">Monday-Friday: 8am-5pm CST</p>
+                  <p className="text-muted-foreground">
+                    <a href="tel:+919988776655">+91 9988776655</a><br />
+                  </p>
+                  <p className="text-sm text-muted-foreground/70">Monday-Friday: 8am-5pm IST</p>
                 </div>
               </div>
               
@@ -113,7 +118,7 @@ const Contact = () => {
           </div>
           
           <div className="lg:col-span-3">
-            <Form {...form}>
+            {/* <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="bg-gray-50 p-6 rounded-lg shadow-sm">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <FormField
@@ -181,7 +186,10 @@ const Contact = () => {
                   {contactMutation.isPending ? "Sending..." : "Send Message"}
                 </Button>
               </form>
-            </Form>
+            </Form> */}
+            <ContactForm
+
+            />
           </div>
         </div>
       </div>

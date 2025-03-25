@@ -11,6 +11,11 @@ import Footer from "@/components/layout/footer";
 import AboutPage from "./pages/about";
 import ProductsPage from "./pages/products";
 import ContactPage from "./pages/contact";
+import { Alert, Snackbar } from "@mui/material";
+import { Provider, useDispatch, useSelector } from "react-redux";
+import { RootState, store } from "./store";
+import { setReduxState } from "./slice/commonSlice";
+import { snackInitialState } from "./helpers";
 
 function Router() {
   return (
@@ -25,9 +30,44 @@ function Router() {
 }
 
 function App() {
+  const { snackState } = useSelector((state: RootState) => state.all);
+  const dispatch = useDispatch()
+
   return (
     <QueryClientProvider client={queryClient}>
       <div className="flex flex-col min-h-scree overflow-x-hidden">
+        <Snackbar
+          open={snackState.open}
+          anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+          autoHideDuration={6000}
+          onClose={(e) => {
+            dispatch(setReduxState({
+              name: 'snackState',
+              value: { ...snackInitialState }
+            }))
+          }}
+          sx={{
+            zIndex: 'calc(var(--top-z-index) + 1)'
+          }}
+        >
+          <Alert
+            onClose={(e) => {
+              dispatch(setReduxState({
+                name: 'snackState',
+                value: { ...snackInitialState }
+              }))
+            }}
+            severity={snackState.severity}
+            variant="filled"
+            sx={{
+              width: '100%',
+              zIndex: 'calc(var(--top-z-index) + 1)'
+            }}
+          >
+            {snackState.message}
+          </Alert>
+        </Snackbar>
+
         <Navbar />
         <main className="flex-grow">
           <Router />

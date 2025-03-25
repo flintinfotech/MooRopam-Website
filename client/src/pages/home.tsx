@@ -29,7 +29,7 @@ const HomePage = () => {
       {/* <FAQ /> */}
       {/* <Waitlist /> */}
       {/* <DealerLocator /> */}
-      {/* <Contact /> */}
+      <Contact />
     </>
   );
 };

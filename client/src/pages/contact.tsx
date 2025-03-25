@@ -11,6 +11,8 @@ import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Mail, Phone, MapPin, MessageSquare } from "lucide-react";
+import ContactForm from "@/components/sections/ContactForm";
+import Contact from "@/components/sections/contact";
 
 // Form validation schema
 const contactFormSchema = z.object({
@@ -67,8 +69,12 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="py-16 container mx-auto px-4">
-      <div className="text-center mb-12">
+    <div className="">
+      <Contact
+      />
+     {
+      false && <>
+       <div className="text-center mb-12">
         <h1 className="text-4xl font-heading font-bold mb-4">Contact Us</h1>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
           Get in touch with our team for inquiries about our products, custom feed solutions, or partnership opportunities.
@@ -243,6 +249,8 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
+      </>
+     }
     </div>
   );
 };

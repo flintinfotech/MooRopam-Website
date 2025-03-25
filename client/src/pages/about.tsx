@@ -220,7 +220,9 @@ const AboutPage = () => {
             {/* <h2 className="text-5xl font-heading font-bold text-center mb-10">Leadership Team</h2> */}
             <Title
               title="Our Leadership"
-              className="text-[var(--clr-blue)]"
+              titleClassname="text-[var(--clr-blue)]"
+              variation={2}
+              color={'var(--clr-blue)'}
             />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-10">
               {teamMembers.map((member) => (

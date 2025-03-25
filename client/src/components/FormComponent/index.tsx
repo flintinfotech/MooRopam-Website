@@ -15,10 +15,10 @@ export const TextInput = (props: any) => {
     size="small"
     sx={{
       '& *, & .MuiFormLabel-root-MuiInputLabel-root': {
-        fontFamily: '"Cabin", sans-serif'
+        fontFamily: '"Poppins", sans-serif'
       },
       '& *::placeholder': {
-        fontFamily: '"Cabin", sans-serif'
+        fontFamily: '"Poppins", sans-serif'
       },
       '& .MuiFormHelperText-root': {
         margin: 0
@@ -35,7 +35,7 @@ export const TextInput = (props: any) => {
       },
     }}
     style={{
-      fontFamily: '"Cabin", sans-serif'
+      fontFamily: '"Poppins", sans-serif'
 
     }}
   />

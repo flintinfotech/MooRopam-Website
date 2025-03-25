@@ -73,7 +73,7 @@ const ContactForm = () => {
 			<Box className='flex flex-col gap-4'
 				sx={{
 					" & .MuiFormLabel-root.MuiInputLabel-root": {
-						fontFamily: '"Cabin", sans-serif'
+						fontFamily: '"Poppins", sans-serif'
 					}
 				}}
 			>
@@ -94,7 +94,7 @@ const ContactForm = () => {
 						helperText={formik.errors.customerName}
 						sx={{
 							'& .MuiInputLabel-root': {
-								fontFamily: '"Cabin", sans-serif'
+								fontFamily: '"Poppins", sans-serif'
 							},
 						}}
 					/>

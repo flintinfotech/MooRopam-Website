@@ -66,10 +66,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 bg-white max-w-[var(--page-container-max-w)] mx-auto">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-          <div className="lg:col-span-2">
+    <section id="contact" className="py-0 bg-[var(--clr-3)] ">
+      <div className="container max-w-[var(--page-container-max-w)] mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="lg:col-span-1">
             <h2 className="text-3xl font-heading font-bold mb-4">Contact Us</h2>
             <p className="text-lg mb-8">
             We would love to connect with you! Please fill out the form below or email us directly at our email to get in touch.
@@ -117,7 +117,7 @@ const Contact = () => {
             </div>
           </div>
           
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-1">
             {/* <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="bg-gray-50 p-6 rounded-lg shadow-sm">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">

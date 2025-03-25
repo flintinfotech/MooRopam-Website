@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import Title from "../common/Title";
 
 const testimonials = [
   {
@@ -30,7 +31,13 @@ const Testimonials = () => {
     <section id="testimonials" className="py-16 bg-amber-50">
       <div className="containesr max-w-[var(--page-container-max-w)] mx-auto px-5">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-heading font-bold mb-4">What Farmers Are Saying</h2>
+          {/* <h2 className="text-3xl font-heading font-bold mb-4">What Farmers Are Saying</h2> */}
+          <Title
+            title={'What Farmers Are Saying'}
+            variation={2}
+            titleClassname="text-[var(--clr-blue)]"
+            color={'var(--clr-blue)'}
+          />
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Don't just take our word for it. Here's what farmers across the country have experienced with Mooropan products.
           </p>

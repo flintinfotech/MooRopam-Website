@@ -1,45 +1,38 @@
-import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CircleCheckIcon, Tractor, Leaf, Warehouse } from "lucide-react";
-import { Product } from "@shared/schema";
-const defaultProducts = [
-  {
-    name: "MasterGraze Premium",
-    price: "$45.99",
-    description: "Our flagship feed formula, designed for optimal cattle growth and weight gain with balanced nutrients.",
-    image: "https://images.unsplash.com/photo-1595872883741-8e17d5f84bd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80",
-    tags: ["High Protein", "Vitamins", "Minerals"]
-  },
-  {
-    name: "CalfStart Formula",
-    price: "$52.99",
-    description: "Specialized nutrition for young calves, supporting immune development and early growth stages.",
-    image: "https://images.unsplash.com/photo-1516467508483-a7212febe31a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80",
-    tags: ["Immune Support", "Growth", "Digestive Health"]
-  },
-  {
-    name: "ProducerPlus",
-    price: "$48.99",
-    description: "Advanced formula for dairy cattle, enhancing milk production while maintaining optimal health.",
-    image: "https://images.unsplash.com/photo-1529756148791-fbf30a8a1245?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    tags: ["Milk Production", "Calcium", "Energy"]
-  }
-];
+import { useLocation } from "wouter";
+import MastiSense1 from '../images/MastiSense1.jpg'
+import MastiSense2 from '../images/MastiSense2.png'
+
+// const defaultProducts = [
+//   {
+//     name: "MasterGraze Premium",
+//     price: "$45.99",
+//     description: "Our flagship feed formula, designed for optimal cattle growth and weight gain with balanced nutrients.",
+//     image: "https://images.unsplash.com/photo-1595872883741-8e17d5f84bd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80",
+//     tags: ["High Protein", "Vitamins", "Minerals"]
+//   },
+//   {
+//     name: "CalfStart Formula",
+//     price: "$52.99",
+//     description: "Specialized nutrition for young calves, supporting immune development and early growth stages.",
+//     image: "https://images.unsplash.com/photo-1516467508483-a7212febe31a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80",
+//     tags: ["Immune Support", "Growth", "Digestive Health"]
+//   },
+//   {
+//     name: "ProducerPlus",
+//     price: "$48.99",
+//     description: "Advanced formula for dairy cattle, enhancing milk production while maintaining optimal health.",
+//     image: "https://images.unsplash.com/photo-1529756148791-fbf30a8a1245?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+//     tags: ["Milk Production", "Calcium", "Energy"]
+//   }
+// ];
 
 const ProductsPage = () => {
-  const { data: products, isLoading, error } = useQuery<Product[]>({
-    queryKey: ['/api/products'],
-  });
 
-  if (isLoading) {
-    return (
-      <div className="py-16 container mx-auto px-4 flex justify-center">
-        <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
-      </div>
-    );
-  }
+  const [location, navigate] = useLocation();
 
   // if (error) {
   //   return (
@@ -51,7 +44,7 @@ const ProductsPage = () => {
   // }
 
   return (
-    <div className="py-16 container mx-auto px-4">
+    <div className="py-16 mx-auto">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-heading font-bold mb-4">Our Premium Cattle Feed Products</h1>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -60,7 +53,31 @@ const ProductsPage = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <section className="product-row">
+        <div className="grid grid-cols-[30vw_1fr_30vw] overflow-y-hidden">
+          <div className="relative z-[-1]">
+            <img
+              src={MastiSense1}
+              alt="ms1"
+              className="w-full z-[-2] h-full object-cover"
+            />
+          </div>
+          <div className="relative z-[1] skew-x-[-21deg] w-[120%] left-[-9%] bg-blue-800">
+            <div className="product-title flex justify-center items-center h-full text-6xl font-onest tracking-wider text-white skew-x-[21deg]">MastiSense<sup className="text-xs">TM</sup></div>
+            {/* <div className="absolute top-[-25%] left-[-25%] w-[50vw] h-[140vw] z-[-1] bg-blue-800 rotate-12"></div> */}
+            {/* <div className="skew-x-[3deg] skew-ys-[3deg] absolute top-0 left-0 w-[120%] h-[120%] z-[-1] bg-blue-800 rotate-12"></div> */}
+          </div>
+          <div className="relative z-[-1]">
+            <img
+              src={MastiSense2}
+              alt="ms2"
+              className="w-full z-[-2] h-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {defaultProducts?.map((product: any, index) => (
           <Card key={product.id} className="overflow-hidden">
             <div className="h-48 overflow-hidden relative">
@@ -98,7 +115,7 @@ const ProductsPage = () => {
             </CardFooter>
           </Card>
         ))}
-      </div>
+      </div> */}
 
       {/* Product Categories Section */}
       <div className="mt-20">
@@ -151,14 +168,17 @@ const ProductsPage = () => {
       {/* Call to Action */}
       <div className="mt-16 text-center">
         <div className="max-w-3xl mx-auto bg-muted p-8 rounded-xl">
-          <h3 className="text-2xl font-heading font-bold mb-4">Need Customized Feed Solutions?</h3>
+          <h3 className="text-2xl font-heading font-bold mb-4">Need more info?</h3>
           <p className="mb-6 text-muted-foreground">
-            Our nutritionists can develop specialized formulations tailored to your specific herd requirements, 
-            regional conditions, and production goals.
+            Call us and share your specific herd requirements, 
+            regional conditions, and production goals
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="default" size="lg">Request Consultation</Button>
-            <Button variant="outline" size="lg">Download Catalog</Button>
+            <Button variant="default" size="lg"
+              onClick={e => {
+                navigate('/contact')
+              }}
+            >Contact Us</Button>
           </div>
         </div>
       </div>

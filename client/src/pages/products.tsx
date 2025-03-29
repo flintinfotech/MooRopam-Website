@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CircleCheckIcon, Tractor, Leaf, Warehouse } from "lucide-react";
-import { useLocation } from "wouter";
-import MastiSense1 from '../images/MastiSense1.jpg'
-import MastiSense2 from '../images/MastiSense2.png'
+import { Link, useLocation } from "wouter";
+import ProductRow from "@/components/ProductRow";
+import parse from "html-react-parser";
 
 // const defaultProducts = [
 //   {
@@ -30,6 +30,24 @@ import MastiSense2 from '../images/MastiSense2.png'
 //   }
 // ];
 
+const product1Info = [
+  {
+    node: "Mastitis is udder inflammation caused by bacterial infection."
+  },
+  {
+    node: "Such infection results in breaching of blood milk barrier and changes the composition of milk which can be analyzed using sensors."
+  },
+  {
+    node: "MastiSense<sup>TM</sup> detects bovine mastitis at an early stage and is a cow side device, easy to use and interpret."
+  },
+  {
+    node: "Milk analyte used for diagnosing mastitis can be repooled with bulk milk."
+  },
+  {
+    node: "It is affordable and available under subscription revenue model with android app for data as Add-on feature."
+  },
+]
+
 const ProductsPage = () => {
 
   const [location, navigate] = useLocation();
@@ -54,26 +72,35 @@ const ProductsPage = () => {
       </div>
 
       <section className="product-row">
-        <div className="grid grid-cols-[30vw_1fr_30vw] overflow-y-hidden">
-          <div className="relative z-[-1]">
-            <img
-              src={MastiSense1}
-              alt="ms1"
-              className="w-full z-[-2] h-full object-cover"
-            />
-          </div>
-          <div className="relative z-[1] skew-x-[-21deg] w-[120%] left-[-9%] bg-blue-800">
-            <div className="product-title flex justify-center items-center h-full text-6xl font-onest tracking-wider text-white skew-x-[21deg]">MastiSense<sup className="text-xs">TM</sup></div>
-            {/* <div className="absolute top-[-25%] left-[-25%] w-[50vw] h-[140vw] z-[-1] bg-blue-800 rotate-12"></div> */}
-            {/* <div className="skew-x-[3deg] skew-ys-[3deg] absolute top-0 left-0 w-[120%] h-[120%] z-[-1] bg-blue-800 rotate-12"></div> */}
-          </div>
-          <div className="relative z-[-1]">
-            <img
-              src={MastiSense2}
-              alt="ms2"
-              className="w-full z-[-2] h-full object-cover"
-            />
-          </div>
+        <ProductRow
+          productName="mastisense"
+        />
+        <div className="max-w-[var(--page-container-max-w)] mx-auto px-5">
+            <div>
+              {
+                product1Info.map((item, index) => {
+
+                  return <div key={`${index}_${index + 1}`}>
+                    <p className="text-xl my-4">
+                      {parse(item.node)}
+                    </p>
+                  </div>
+                })
+              }
+            </div>
+            {/* <div className="relative bg-red flex justify-center items-center min-h-[100%]">
+              <div className="absolute top-0 left-0 w-full h-full bg-blue-800 text-white my-1 rounded-sm hover:scale-[1.01]">
+                <Link to="/contact-us" className={"w-full h-full flex justify-center items-center text-2xl font-bold"}>
+                  Buy
+                </Link>
+              </div>
+            </div> */}
+
+<div className="bg-blue-800 text-white my-1 rounded-sm hover:scale-[1.01] w-fit ">
+                <Link to="/contact-us" className={"h-full py-2 px-4 flex justify-center items-center text-2xl font-bold"}>
+                  Buy Now
+                </Link>
+              </div>
         </div>
       </section>
 
@@ -134,7 +161,7 @@ const ProductsPage = () => {
               </p>
             </CardContent>
           </Card>
-          
+
           <Card className="text-center">
             <CardHeader className="pb-2">
               <div className="mx-auto bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-4">
@@ -148,7 +175,7 @@ const ProductsPage = () => {
               </p>
             </CardContent>
           </Card>
-          
+
           <Card className="text-center">
             <CardHeader className="pb-2">
               <div className="mx-auto bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-4">
@@ -170,7 +197,7 @@ const ProductsPage = () => {
         <div className="max-w-3xl mx-auto bg-muted p-8 rounded-xl">
           <h3 className="text-2xl font-heading font-bold mb-4">Need more info?</h3>
           <p className="mb-6 text-muted-foreground">
-            Call us and share your specific herd requirements, 
+            Call us and share your specific herd requirements,
             regional conditions, and production goals
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

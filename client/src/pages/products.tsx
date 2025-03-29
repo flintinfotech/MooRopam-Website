@@ -5,6 +5,7 @@ import { CircleCheckIcon, Tractor, Leaf, Warehouse } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import ProductRow from "@/components/ProductRow";
 import parse from "html-react-parser";
+import cattlevideo from '../videos/mooropanvideo.mp4'
 
 // const defaultProducts = [
 //   {
@@ -104,6 +105,19 @@ const ProductsPage = () => {
         </div>
       </section>
 
+      <div className="inset-0 mt-4">
+        <video
+          // ref={videoRef}
+          className="w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          controls
+        >
+          <source src={cattlevideo} type="video/mp4" />
+        </video>
+      </div>
+
       {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {defaultProducts?.map((product: any, index) => (
           <Card key={product.id} className="overflow-hidden">
@@ -145,7 +159,7 @@ const ProductsPage = () => {
       </div> */}
 
       {/* Product Categories Section */}
-      <div className="mt-20">
+      {/* <div className="mt-20">
         <h2 className="text-3xl font-heading font-bold text-center mb-10">Product Categories</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Card className="text-center">
@@ -190,7 +204,7 @@ const ProductsPage = () => {
             </CardContent>
           </Card>
         </div>
-      </div>
+      </div> */}
 
       {/* Call to Action */}
       <div className="mt-16 text-center">

@@ -65,10 +65,9 @@ const ProductsPage = () => {
   return (
     <div className="py-16 mx-auto">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-heading font-bold mb-4">Our Premium Cattle Feed Products</h1>
-        <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+        <h1 className="text-4xl font-heading font-bold mb-4">Our Premium Products</h1>
+        <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
           Scientifically formulated feeds designed to optimize cattle health, growth, and production.
-          Choose the right nutrition for your herd needs.
         </p>
       </div>
 

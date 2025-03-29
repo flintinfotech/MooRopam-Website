@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useParams } from "wouter";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
@@ -16,16 +16,29 @@ import { Provider, useDispatch, useSelector } from "react-redux";
 import { RootState, store } from "./store";
 import { setReduxState } from "./slice/commonSlice";
 import { snackInitialState } from "./helpers";
+import ScrollToTop from "./components/common/ScrollToTop";
+import { useEffect } from "react";
+import { usePathname } from "wouter/use-browser-location";
 
 function Router() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/about" component={AboutPage} />
-      <Route path="/products" component={ProductsPage} />
-      <Route path="/contact" component={ContactPage} />
-      <Route component={NotFound} />
-    </Switch>
+    <>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/about" component={AboutPage} />
+        <Route path="/products" component={ProductsPage} />
+        <Route path="/contact" component={ContactPage} />
+        <Route component={NotFound} />
+      </Switch>
+      
+      <ScrollToTop />
+    </>
   );
 }
 
@@ -35,7 +48,7 @@ function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex flex-col min-h-scree overflow-x-hidden">
+      {/* <div className="flexdd flex-coddl min-h-screen overflow-x-hidden"> */}
         <Snackbar
           open={snackState.open}
           anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
@@ -73,7 +86,7 @@ function App() {
           <Router />
         </main>
         <Footer />
-      </div>
+      {/* </div> */}
       <Toaster />
     </QueryClientProvider>
   );

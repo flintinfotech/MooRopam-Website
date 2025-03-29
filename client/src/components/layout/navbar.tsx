@@ -12,6 +12,7 @@ import {
 import Logo from '../../images/Logo.png'
 //@ts-ignore
 import Translator from '../ui/Translator'
+import ScrollProgress from "../common/ScrollProgress";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -34,7 +35,7 @@ const Navbar = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
   return (
-    <header className="sticky top-0 z-50 bg-background shadow-md ">
+    <header className="sticky top-0 w-full z-50 bg-background shadow-md">
       <nav className="navbar container mx-auto px-4 py-2 flex justify-between items-center">
         <div className="flex items-center">
           <Link href="/" className="text-2xl font-heading font-bold text-primary flex items-center gap-2">
@@ -130,6 +131,7 @@ const Navbar = () => {
           </div>
         </div>
       )}
+      <ScrollProgress />
     </header>
   );
 };

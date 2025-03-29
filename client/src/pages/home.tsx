@@ -12,23 +12,17 @@ import { useQuery } from "@tanstack/react-query";
 import Specialization from "@/components/Specialization";
 
 const HomePage = () => {
-  // Fetch product data 
   const { data: products = [] } = useQuery({
     queryKey: ['/api/products'],
   });
 
   return (
     <>
-      {/* <TagLine /> */}
       <Hero />
-      {/* <Features /> */}
       <Specialization />
       <Products products={products} />
       <About />
       <Testimonials />
-      {/* <FAQ /> */}
-      {/* <Waitlist /> */}
-      {/* <DealerLocator /> */}
       <Contact />
     </>
   );

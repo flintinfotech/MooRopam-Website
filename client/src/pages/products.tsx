@@ -76,19 +76,19 @@ const ProductsPage = () => {
           productName="mastisense"
         />
         <div className="max-w-[var(--page-container-max-w)] mx-auto px-5">
-            <div>
-              {
-                product1Info.map((item, index) => {
+          <div>
+            {
+              product1Info.map((item, index) => {
 
-                  return <div key={`${index}_${index + 1}`}>
-                    <p className="text-xl my-4">
-                      {parse(item.node)}
-                    </p>
-                  </div>
-                })
-              }
-            </div>
-            {/* <div className="relative bg-red flex justify-center items-center min-h-[100%]">
+                return <div key={`${index}_${index + 1}`}>
+                  <p className="text-xl my-4">
+                    {parse(item.node)}
+                  </p>
+                </div>
+              })
+            }
+          </div>
+          {/* <div className="relative bg-red flex justify-center items-center min-h-[100%]">
               <div className="absolute top-0 left-0 w-full h-full bg-blue-800 text-white my-1 rounded-sm hover:scale-[1.01]">
                 <Link to="/contact-us" className={"w-full h-full flex justify-center items-center text-2xl font-bold"}>
                   Buy
@@ -96,11 +96,11 @@ const ProductsPage = () => {
               </div>
             </div> */}
 
-<div className="bg-blue-800 text-white my-1 rounded-sm hover:scale-[1.01] w-fit ">
-                <Link to="/contact-us" className={"h-full py-2 px-4 flex justify-center items-center text-2xl font-bold"}>
-                  Buy Now
-                </Link>
-              </div>
+          <div className="bg-blue-800 text-white my-1 rounded-sm hover:scale-[1.01] w-fit ">
+            <Link to="/contact-us" className={"h-full py-2 px-4 flex justify-center items-center text-2xl font-bold"}>
+              Buy Now
+            </Link>
+          </div>
         </div>
       </section>
 

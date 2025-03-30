@@ -39,7 +39,7 @@ const product1Info = [
     node: "Such infection results in breaching of blood milk barrier and changes the composition of milk which can be analyzed using sensors."
   },
   {
-    node: "MastiSense<sup>TM</sup> detects bovine mastitis at an early stage and is a cow side device, easy to use and interpret."
+    node: "<span className='text-blue-800 text-2xl'>MastiSense<sup className='text-xs'>TM</sup></span> detects bovine mastitis at an early stage and is a cow side device, easy to use and interpret."
   },
   {
     node: "Milk analyte used for diagnosing mastitis can be repooled with bulk milk."
@@ -47,6 +47,9 @@ const product1Info = [
   {
     node: "It is affordable and available under subscription revenue model with android app for data as Add-on feature."
   },
+  // {
+  //   node: "<div className='pt-6 text-lg text-center'>Watch the video below for step-wise guidance to use MastiSense<sup>TM</sup></div>"
+  // },
 ]
 
 const ProductsPage = () => {
@@ -101,6 +104,8 @@ const ProductsPage = () => {
               Buy Now
             </Link>
           </div>
+
+          <div className='pt-6 text-lg text-center'>Watch the video below for step-wise guidance to use MastiSense<sup className='text-xs'>TM</sup></div>
         </div>
       </section>
 

@@ -82,7 +82,7 @@ function App() {
         </Snackbar>
 
         <Navbar />
-        <main className="flex-grow">
+        <main className="flex-grow snap-y snap-mandatory overflow-x-hidden">
           <Router />
         </main>
         <Footer />

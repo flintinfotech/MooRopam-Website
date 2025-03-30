@@ -74,11 +74,11 @@ const ProductsPage = () => {
         </p>
       </div>
 
-      <section className="product-row">
+      <section className="product-row ">
         <ProductRow
           productName="mastisense"
         />
-        <div className="max-w-[var(--page-container-max-w)] mx-auto px-5">
+        <div className="product-desc max-w-[var(--page-container-max-w)] mx-auto px-5">
           <div>
             {
               product1Info.map((item, index) => {
@@ -105,7 +105,7 @@ const ProductsPage = () => {
             </Link>
           </div>
 
-          <div className='pt-6 text-lg text-center'>Watch the video below for step-wise guidance to use MastiSense<sup className='text-xs'>TM</sup></div>
+          <div className='pt-6 text-lg text-center italic'>Watch the video below for step-wise guidance to use MastiSense<sup className='text-xs'>TM</sup></div>
         </div>
       </section>
 

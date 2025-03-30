@@ -6,7 +6,7 @@ const ProductRow = ({
 }: any) => {
 
   if (productName === "mastisense") {
-    return <div className="grid grid-cols-[40vw_1fr_40vw] overflow-hidden">
+    return <div className="grid grid-cols-[40vw_1fr_40vw] overflow-hidden relative z-[1]">
       <div className="relative z-[-1]">
         <img
           src={MastiSense1}

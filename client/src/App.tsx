@@ -33,7 +33,7 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/about" component={AboutPage} />
         <Route path="/products" component={ProductsPage} />
-        <Route path="/contact" component={ContactPage} />
+        <Route path="/contact-us" component={ContactPage} />
         <Route component={NotFound} />
       </Switch>
       

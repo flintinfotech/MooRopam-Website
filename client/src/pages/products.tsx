@@ -216,7 +216,7 @@ const ProductsPage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="default" size="lg"
               onClick={e => {
-                navigate('/contact')
+                navigate('/contact-us')
               }}
             >Contact Us</Button>
           </div>

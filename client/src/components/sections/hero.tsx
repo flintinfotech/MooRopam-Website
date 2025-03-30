@@ -167,7 +167,7 @@ const Hero = () => {
               className="bg-white/10 hover:bg-white/20 text-white border-white font-heading font-semibold backdrop-blur-sm"
               asChild
             >
-              <Link href="/contact">Contact Us</Link>
+              <Link href="/contact-us">Contact Us</Link>
             </Button>
           </motion.div>
         </motion.div>

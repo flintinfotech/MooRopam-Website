@@ -61,7 +61,7 @@ const AboutPage = () => {
 
         <div className="">
 
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 relative z-[2]">
             <Title
               title={'About Mooropan'}
               titleClassname={'text-[var(--clr-orange)]'}

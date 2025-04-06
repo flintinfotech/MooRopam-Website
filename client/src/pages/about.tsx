@@ -1,10 +1,8 @@
 import Title from "@/components/common/Title";
-import { Card, CardContent } from "@/components/ui/card";
 import { Tractor, Award, Users, Leaf } from "lucide-react";
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import { useState } from 'react';
-import PresenceImg from '../images/OurPresence.jpg'
 import MissionBg from '../images/mission-bg.png'
 import AboutUsVideo from '../images/AboutUsVideo.mp4'
 import CowWalking from '../images/cow-walking.mp4'
@@ -12,48 +10,46 @@ import supriya from "../images/supriya.png";
 
 import ankita from "../images/ankita.png";
 import aryan from "../images/aryan.png";
-import { Fade, Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
+import Sidebar from "@/components/common/Sidebar";
 
 const AboutPage = () => {
-  // Add this near the other state declarations
-  const [hasTriggered, setHasTriggered] = useState<{ [key: number]: boolean }>({});
-
-  const stats = [
-    { id: 1, label: "Years of Experience", value: "25+", icon: Tractor },
-    // { id: 2, label: "Quality Certifications", value: "12", icon: Award },
-    { id: 3, label: "Happy Farmers", value: "5,000+", icon: Users },
-    { id: 4, label: "Organic Ingredients", value: "100%", icon: Leaf },
-  ];
 
   const teamMembers = [
     {
       id: 1,
       name: "Dr. Anikta Singh",
       role: "Founder",
-      // bio: "Dr. Johnson has over 15 years of experience in animal nutrition and holds a PhD in Livestock Sciences.",
       image: ankita,
     },
     {
       id: 2,
       name: "Aryan Donga",
       role: "Co-Founder",
-      // bio: "With 20 years in agricultural manufacturing, Michael ensures our feed production meets the highest standards.",
       image: aryan,
     },
     {
       id: 3,
       name: "Supriya Shetkar",
       role: "CFO",
-      // bio: "Emily leads our research team in developing innovative feed formulations for maximum cattle health and productivity.",
       image: supriya,
     },
   ];
 
+    const sections = [
+    { id: 'about-story', label: 'Our Story' },
+    { id: 'about-mission', label: 'Mission & Vision' },
+    { id: 'about-values', label: 'Our Values' },
+    { id: 'about-team', label: 'Leadership' },
+  ];
+
   return (
     <div className="relative">
-
+      <Sidebar
+        sections={sections}
+      />
     
-      <div className="py-16 relative mx-auto">
+      <div className="py-16 relative mx-auto ml-[12vw]">
         {/* <img
         src={AboutBg}
         className="z-[-1] absolute bottom-0 left-0 object-cover w-[100vw] h-auto blur-sm opacity-50"
@@ -69,10 +65,9 @@ const AboutPage = () => {
 
           </div>
 
-          <div></div>
 
           {/* Our Story Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 max-w-[var(--page-container-max-w)] mx-auto px-5 md:py-5">
+          <div id="about-story" className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 max-w-[var(--page-container-max-w)] mx-auto px-5 md:py-5">
             <div className="flex flex-col justify-center">
               <h2 className="text-3xl font-heading font-bold mb-6">Our Story</h2>
               <p className="text-muted-foreground mb-4">
@@ -114,7 +109,7 @@ const AboutPage = () => {
           </div>
 
 
-          <div className="mt-12 mb-20 overflow-visible relative">
+          <div id="about-mission" className="mt-12 mb-20 overflow-visible relative">
             <img
               src={MissionBg}
               className="mission-bg absolute left-0 bottom-[-160px] object-cover w-[100vw] z-[-1] h-auto rounded-lg mb-20"
@@ -221,7 +216,7 @@ const AboutPage = () => {
                 loop
                 className="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-plus-darker z-[-1]"
               />
-              <div className="relative z-10 py-16 max-w-[var(--page-container-max-w)] mx-auto px-5 md:py-5">
+              <div id="about-values"  className="relative z-10 py-16 max-w-[var(--page-container-max-w)] mx-auto px-5 md:py-5">
                 {/* <h2 className="text-3xl font-heading font-bold text-center mb-10">Our Values</h2> */}
                 <Title
                   title={'Our Values'}
@@ -259,7 +254,7 @@ const AboutPage = () => {
             </div>
 
             {/* Our Team Section */}
-            <div className="mb-12 max-w-[var(--page-container-max-w)] mx-auto px-5 md:py-5">
+            <div id="about-team"  className="mb-12 max-w-[var(--page-container-max-w)] mx-auto px-5 md:py-5">
               {/* <h2 className="text-5xl font-heading font-bold text-center mb-10">Leadership Team</h2> */}
               <Title
                 title="Our Leadership"

@@ -8,8 +8,8 @@ import {
 
 const faqs = [
   {
-    question: "What makes Mooropan different from other cattle feed?",
-    answer: "Mooropan products are formulated based on the latest nutritional science, using premium ingredients sourced from sustainable farms. Our proprietary blending process ensures optimal nutrient bioavailability, and all products undergo rigorous quality testing before reaching your farm."
+    question: "What makes MooRopan different from other cattle feed?",
+    answer: "MooRopan products are formulated based on the latest nutritional science, using premium ingredients sourced from sustainable farms. Our proprietary blending process ensures optimal nutrient bioavailability, and all products undergo rigorous quality testing before reaching your farm."
   },
   {
     question: "How long before I see results in my herd?",

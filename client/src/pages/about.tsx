@@ -63,7 +63,7 @@ const AboutPage = () => {
 
           <div className="text-center mb-12 relative z-[2]">
             <Title
-              title={'About Mooropan'}
+              title={'About MooRopan'}
               titleClassname={'text-[var(--clr-orange-1)]'}
             />
 

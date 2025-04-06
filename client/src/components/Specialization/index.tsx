@@ -53,7 +53,7 @@ const Specialization = () => {
         >
           {/* <h1 className="text-4xl text-orange-600 font-heading font-bold mb-4">Why Choose Mooropan?</h1> */}
           <Title
-            title={'Why Choose Mooropan?'}
+            title={'Why Choose MooRopan?'}
             titleClassname={'text-[var(--clr-orange-1)]'}
           />
           <p className="text-xl text-muted-foreground max-w-5xl mt-12 mx-auto">

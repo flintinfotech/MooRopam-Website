@@ -67,7 +67,7 @@ const Features = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-heading font-bold mb-4">Why Choose Mooropan?</h2>
+          <h2 className="text-3xl font-heading font-bold mb-4">Why Choose MooRopan?</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Our scientifically formulated feed solutions provide complete nutrition that promotes cattle health and maximizes your farm's productivity.
           </p>

@@ -30,11 +30,9 @@ const Navbar = () => {
   };
   return (
     <header className="sticky top-0 w-full z-50 bg-background shadow-md">
-      <nav className="navbar container mx-auto bg-[var(--clr-white)] px-4 py-2 flex justify-between items-center">
+      <nav className="navbar container mx-auto px-4 py-2 flex justify-between items-center">
         <div className="flex items-center">
           <Link href="/" className="text-2xl font-heading font-bold text-[var(--clr-orange-1)] flex items-center gap-2">
-            {/* <Leaf className="h-6 w-6" />
-            <span>Mooropan</span> */}
             <img
               src={Logo}
               alt="Logo"

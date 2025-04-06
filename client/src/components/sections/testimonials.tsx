@@ -8,7 +8,7 @@ const testimonials = [
     company: "Davidson Family Farms, Texas",
     initials: "JD",
     rating: 5,
-    text: "Since switching to Mooropan, my herd's health has visibly improved. Better coat quality, increased weight gain, and my veterinary costs are down nearly 30%."
+    text: "Since switching to MooRopan, my herd's health has visibly improved. Better coat quality, increased weight gain, and my veterinary costs are down nearly 30%."
   },
   {
     name: "Sarah Wilson",
@@ -39,7 +39,7 @@ const Testimonials = () => {
             color={'var(--clr-blue)'}
           />
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what farmers across the country have experienced with Mooropan products.
+            Don't just take our word for it. Here's what farmers across the country have experienced with MooRopan products.
           </p>
         </div>
         

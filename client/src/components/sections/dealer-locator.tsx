@@ -19,7 +19,7 @@ const DealerLocator = () => {
           <div>
             <h2 className="text-3xl font-heading font-bold mb-4">Find a Dealer Near You</h2>
             <p className="text-lg mb-6">
-              Our network of authorized dealers ensures you can access Mooropan products wherever you are. Enter your location to find the nearest dealer.
+              Our network of authorized dealers ensures you can access MooRopan products wherever you are. Enter your location to find the nearest dealer.
             </p>
             
             <form onSubmit={handleSearch} className="mb-6">

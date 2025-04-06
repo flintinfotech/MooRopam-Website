@@ -82,9 +82,9 @@ const Waitlist = () => {
     <section id="waitlist" className="py-16 bg-[var(--clr-orange-3)] text-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-heading font-bold mb-4">Be the First to Try Mooropan</h2>
+          <h2 className="text-3xl font-heading font-bold mb-4">Be the First to Try MooRopan</h2>
           <p className="text-lg mb-8">
-            Join our waitlist to be among the first farmers to experience the Mooropan difference. Early subscribers will receive exclusive discounts and personalized consultation.
+            Join our waitlist to be among the first farmers to experience the MooRopan difference. Early subscribers will receive exclusive discounts and personalized consultation.
           </p>
           
           <Form {...form}>
@@ -199,7 +199,7 @@ const Waitlist = () => {
                     </FormControl>
                     <div className="text-sm space-y-1 leading-none text-left">
                       <FormLabel>
-                        I agree to receive updates from Mooropan about products, services, and early access opportunities. We respect your privacy and will never share your information.
+                        I agree to receive updates from MooRopan about products, services, and early access opportunities. We respect your privacy and will never share your information.
                       </FormLabel>
                       <FormMessage className="text-white/90" />
                     </div>

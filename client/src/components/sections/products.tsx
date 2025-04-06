@@ -143,7 +143,7 @@ const Products = ({ products = [] }: ProductsProps) => {
                         <Badge
                           key={idx}
                           variant="outline"
-                          className="bg-primary/10 text-primary border-primary/20"
+                          className="bg-[var(--clr-orange-3)] text-[var(--clr-orange-1)] border-primary/20"
                         >
                           {tag}
                         </Badge>
@@ -152,7 +152,7 @@ const Products = ({ products = [] }: ProductsProps) => {
                   </CardContent>
                   <CardFooter className="p-6 pt-0">
                     <Button
-                      className="w-full bg-primary hover:bg-primary/90"
+                      className="w-full bg-[var(--clr-orange-3)] hover:bg-[var(--clr-orange-2)]"
                       asChild
                     >
                       <motion.div
@@ -177,7 +177,7 @@ const Products = ({ products = [] }: ProductsProps) => {
           >
             <Button
               variant="link"
-              className="font-heading font-semibold text-primary hover:text-primary/80 transition-colors"
+              className="font-heading font-semibold text-[var(--clr-orange-1)] hover:text-[var(--clr-orange-3)] transition-colors"
               asChild
             >
               <motion.div whileHover={{ x: 5 }} whileTap={{ x: -2 }}>

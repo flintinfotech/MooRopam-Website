@@ -4,7 +4,7 @@ const TagLine = () => {
   const text = "Affordable and Innovative Solutions for Cow Health";
 
   return (
-    <section className="py-3 bg-primary/d5 overflow-hidden bg-orange-200">
+    <section className="py-3 overflow-hidden bg-[var(--clr-yellow)]">
       <div className="container mx-auto px-4 nav__text-content-wrapper ">
         {/* <motion.h2 
           className="nav__text-content text-3xl md:text-4xl font-bold font-onest tracking-wider text-center text-primary"

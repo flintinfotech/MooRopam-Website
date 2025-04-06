@@ -62,7 +62,7 @@ const Testimonials = () => {
                 </p>
                 <div className="flex items-center">
                   <div className="mr-4">
-                    <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary font-bold">
+                    <div className="w-12 h-12 bg-[var(--clr-yellow)] rounded-full flex items-center justify-center text-[var(--clr-orange-1)] font-bold">
                       {testimonial.initials}
                     </div>
                   </div>

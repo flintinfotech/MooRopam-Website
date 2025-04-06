@@ -77,7 +77,7 @@ const Contact = () => {
             
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="mr-4 text-primary text-xl">
+                <div className="mr-4 text-[var(--clr-orange-1)] text-xl">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
@@ -90,7 +90,7 @@ const Contact = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="mr-4 text-primary text-xl">
+                <div className="mr-4 text-[var(--clr-orange-1)] text-xl">
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
@@ -103,7 +103,7 @@ const Contact = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="mr-4 text-primary text-xl">
+                <div className="mr-4 text-[var(--clr-orange-1)] text-xl">
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>

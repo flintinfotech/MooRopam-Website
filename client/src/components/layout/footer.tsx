@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="col-span-2">
             <h3 className="text-xl font-heading font-bold mb-4 flex items-center">
-              <Leaf className="mr-2 h-5 w-5" /> Mooropan
+              <Leaf className="mr-2 h-5 w-5" /> MooRopan<sup className="text-[10px]">TM</sup>
             </h3>
             <p className="mb-4 text-gray-300 max-w-lg">
               Premium cattle feed solutions based on science, not tradition. Improving animal health and farm profitability.
@@ -59,7 +59,7 @@ const Footer = () => {
         </div>
         
         <div className="pt-6 border-t border-gray-800 text-center text-sm text-gray-300">
-          <p className="mb-2">© {new Date().getFullYear()} Mooropan, Inc. All rights reserved.</p>
+          <p className="mb-2">© {new Date().getFullYear()} MooRopan<sup className="text-[8px]">TM</sup>, Inc. All rights reserved.</p>
           {/* <div className="flex justify-center space-x-4">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

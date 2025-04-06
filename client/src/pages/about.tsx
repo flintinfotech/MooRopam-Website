@@ -64,7 +64,7 @@ const AboutPage = () => {
           <div className="text-center mb-12 relative z-[2]">
             <Title
               title={'About Mooropan'}
-              titleClassname={'text-[var(--clr-orange)]'}
+              titleClassname={'text-[var(--clr-orange-1)]'}
             />
 
           </div>
@@ -121,7 +121,7 @@ const AboutPage = () => {
             />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-[var(--page-container-max-w)] mx-auto px-5 md:py-5">
               <div className="text-left space-y-6 pt-8 rounded-xl  backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <h3 className="text-2xl font-bold text-[var(--clr-orange)]">Our Mission</h3>
+                <h3 className="text-2xl font-bold text-[var(--clr-orange-1)]">Our Mission</h3>
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   At MooRopan, we are dedicated to revolutionizing cattle healthcare through innovative and sustainable solutions. Our mission is to empower farmers with accessible, high-quality healthcare products and expert guidance, ensuring the optimal health and productivity of their livestock.
                 </p>
@@ -281,8 +281,8 @@ const AboutPage = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     </div>
                     <div className="relative transition-all group-hover:top-4">
-                      <h3 className="text-3xl font-onest font-bold text-[var(--clr-orange)] mb-1 transition-transform duration-300 group-hover:translate-y-[-4px]">{member.name}</h3>
-                      <p className="text-primary text-xl font-bold mb-2 transition-all duration-300 group-hover:text-[var(--clr-orange)]">{member.role}</p>
+                      <h3 className="text-3xl font-onest font-bold text-[var(--clr-orange-1)] mb-1 transition-transform duration-300 group-hover:translate-y-[-4px]">{member.name}</h3>
+                      <p className="text-[var(--clr-orange-1)] text-xl font-bold mb-2 transition-all duration-300 group-hover:text-[var(--clr-orange-1)]">{member.role}</p>
                     </div>
                   </div>
                 ))}

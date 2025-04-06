@@ -193,8 +193,8 @@ const ContactPage = () => {
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Phone className="h-6 w-6 text-primary" />
+                <div className="bg-[var(--clr-orange-3)] p-3 rounded-full">
+                  <Phone className="h-6 w-6 text-[var(--clr-orange-1)]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg">Phone</h3>
@@ -204,8 +204,8 @@ const ContactPage = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Mail className="h-6 w-6 text-primary" />
+                <div className="bg-[var(--clr-orange-3)] p-3 rounded-full">
+                  <Mail className="h-6 w-6 text-[var(--clr-orange-1)]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg">Email</h3>
@@ -215,8 +215,8 @@ const ContactPage = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <MapPin className="h-6 w-6 text-primary" />
+                <div className="bg-[var(--clr-orange-3)] p-3 rounded-full">
+                  <MapPin className="h-6 w-6 text-[var(--clr-orange-1)]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg">Main Office</h3>
@@ -233,7 +233,7 @@ const ContactPage = () => {
           <div className="mt-auto">
             <div className="bg-muted p-6 rounded-lg">
               <div className="flex items-center gap-4 mb-4">
-                <MessageSquare className="h-6 w-6 text-primary" />
+                <MessageSquare className="h-6 w-6 text-[var(--clr-orange-1)]" />
                 <h3 className="font-semibold text-lg">Customer Support Hours</h3>
               </div>
               <p className="text-muted-foreground mb-2">

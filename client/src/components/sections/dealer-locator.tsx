@@ -46,7 +46,7 @@ const DealerLocator = () => {
             
             <Button 
               variant="link" 
-              className="text-primary hover:text-primary/80 font-heading font-medium p-0"
+              className="text-[var(--clr-orange-1)] hover:text-[var(--clr-orange-3)] font-heading font-medium p-0"
               asChild
             >
               <a href="#contact" className="inline-flex items-center">
@@ -59,7 +59,7 @@ const DealerLocator = () => {
             {/* Dealer Map Placeholder */}
             <div className="h-full w-full flex items-center justify-center">
               <div className="text-center">
-                <MapPin className="h-10 w-10 text-primary mb-3 mx-auto" />
+                <MapPin className="h-10 w-10 text-[var(--clr-orange-1)] mb-3 mx-auto" />
                 {/* <p className="text-muted-foreground">Interactive Dealer Map</p> */}
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.718156919099!2d72.78017147503654!3d21.203352380490063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04d255af7a505%3A0x723d727d35bd4a52!2sMooRopan%20India%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1742915833606!5m2!1sen!2sin" width="600" height="450" style={{ border: 0 }} allowFullScreen={false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
               </div>

@@ -2,21 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --clr-1: #3F6F31;
-  --clr-blue: #1F2246;
-  --clr-blue-hover: #4049ad;
-  --clr-orange: #EA580C;
-  --clr-green: #2A5F1B;
-  --clr-3: #e7f4d5;
-  --page-container-max-w: 1300px;
-}
-
 #gtranslate_src select {
   z-index: -4;
   width: 81px;
 }
-
 
 .nav-text::before {
   content: '';
@@ -51,7 +40,7 @@
   width: 100%;
   height: 100%;
   border-top-left-radius: 25px;
-  border: 7px solid var(--clr-orange);
+  border: 7px solid var(--clr-orange-1);
   z-index: -1;
 }
 

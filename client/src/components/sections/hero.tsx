@@ -104,7 +104,7 @@ const Hero = () => {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full ${
-              currentSlide === index ? "bg-primary" : "bg-white/50"
+              currentSlide === index ? "bg-[var(--clr-orange-3)]" : "bg-white/50"
             }`}
             aria-label={`Go to slide ${index + 1}`}
             whileHover={{ scale: 1.2 }}
@@ -156,7 +156,7 @@ const Hero = () => {
           >
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-white font-heading font-semibold"
+              className="bg-[var(--clr-orange-3)] hover:bg-[var(--clr-orange-2)] text-white font-heading font-semibold"
               asChild
             >
               <Link href="/products">View Our Products</Link>

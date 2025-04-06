@@ -28,20 +28,20 @@ const About = () => {
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
-                <CheckCircle className="text-primary mt-1 mr-3 h-5 w-5" />
+                <CheckCircle className="text-[var(--clr-orange-1)] mt-1 mr-3 h-5 w-5" />
                 <p>Committed to sustainable sourcing and manufacturing</p>
               </div>
               <div className="flex items-start">
-                <CheckCircle className="text-primary mt-1 mr-3 h-5 w-5" />
+                <CheckCircle className="text-[var(--clr-orange-1)] mt-1 mr-3 h-5 w-5" />
                 <p>Products tested and approved by leading agricultural institutions</p>
               </div>
               <div className="flex items-start">
-                <CheckCircle className="text-primary mt-1 mr-3 h-5 w-5" />
+                <CheckCircle className="text-[var(--clr-orange-1)] mt-1 mr-3 h-5 w-5" />
                 <p>Family-owned business with deep roots in farming communities</p>
               </div>
             </div>
             
-            <Button className="bg-primary hover:bg-primary/90 text-white font-heading font-semibold" size="lg" asChild>
+            <Button className="bg-[var(--clr-orange-3)] hover:bg-[var(--clr-orange-2)] text-white font-heading font-semibold" size="lg" asChild>
               <a href="#contact">Learn More About Our Story</a>
             </Button>
           </div>

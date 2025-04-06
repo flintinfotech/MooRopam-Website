@@ -54,7 +54,7 @@ const Specialization = () => {
           {/* <h1 className="text-4xl text-orange-600 font-heading font-bold mb-4">Why Choose Mooropan?</h1> */}
           <Title
             title={'Why Choose Mooropan?'}
-            titleClassname={'text-orange-600'}
+            titleClassname={'text-[var(--clr-orange-1)]'}
           />
           <p className="text-xl text-muted-foreground max-w-5xl mt-12 mx-auto">
             Our scientifically formulated feed solutions provide complete nutrition that promotes cattle health and maximizes your farm's productivity.

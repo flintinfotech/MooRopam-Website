@@ -38,7 +38,7 @@ const Navbar = () => {
     <header className="sticky top-0 w-full z-50 bg-background shadow-md">
       <nav className="navbar container mx-auto px-4 py-2 flex justify-between items-center">
         <div className="flex items-center">
-          <Link href="/" className="text-2xl font-heading font-bold text-primary flex items-center gap-2">
+          <Link href="/" className="text-2xl font-heading font-bold text-[var(--clr-orange-1)] flex items-center gap-2">
             {/* <Leaf className="h-6 w-6" />
             <span>Mooropan</span> */}
             <img
@@ -57,7 +57,7 @@ const Navbar = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className=" relative text-xl text-orange-800 font-kanit font-medium hover:text-orange-400 transition-colors"
+                className=" relative text-xl text-[var(--clr-orange-1)] font-kanit font-medium hover:text-[var(--clr-orange-3)] transition-colors"
               >
                 <div className="nav-text relative">
                 {link.label}
@@ -81,15 +81,15 @@ const Navbar = () => {
             </DropdownMenu> */}
 
             <div>
-            <div className="text-sm cursor-pointer flex items-center gap-2 hover:text-primary transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+            <div className="text-sm cursor-pointer flex items-center gap-2 hover:text-[var(--clr-orange-3)] transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--clr-orange-3)]">
                 <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6z"/>
                 <path d="m22 6-10 7L2 6"/>
               </svg>
               <span>contact@example.com</span>
             </div>
-            <div className="text-sm cursor-pointer flex items-center gap-2 hover:text-primary transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+            <div className="text-sm cursor-pointer flex items-center gap-2 hover:text-[var(--clr-orange-3)] transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--clr-orange-3)]">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
               </svg>
               <span>(555) 123-4567</span>
@@ -122,7 +122,7 @@ const Navbar = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className="font-heading font-medium hover:text-primary transition-colors py-2 border-b border-muted last:border-0"
+                className="font-heading font-medium hover:text-[var(--clr-orange-3)] transition-colors py-2 border-b border-muted last:border-0"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label}

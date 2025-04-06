@@ -89,7 +89,7 @@ const Features = () => {
               }}
             >
               <motion.div 
-                className="text-primary text-4xl mb-4"
+                className="text-[var(--clr-orange-1)] text-4xl mb-4"
                 variants={iconVariants}
               >
                 {feature.icon}

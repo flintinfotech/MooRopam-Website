@@ -79,7 +79,7 @@ const Waitlist = () => {
   };
 
   return (
-    <section id="waitlist" className="py-16 bg-primary text-white">
+    <section id="waitlist" className="py-16 bg-[var(--clr-orange-3)] text-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-heading font-bold mb-4">Be the First to Try Mooropan</h2>

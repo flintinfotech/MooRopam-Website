@@ -29,7 +29,7 @@ const FAQ = () => {
   const [openItems, setOpenItems] = useState<string[]>([]);
 
   return (
-    <section id="faq" className="py-16 bg-[var(--clr-3)]">
+    <section id="faq" className="py-16 bg-[var(--clr-yellow-light)]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-heading font-bold mb-4">Frequently Asked Questions</h2>

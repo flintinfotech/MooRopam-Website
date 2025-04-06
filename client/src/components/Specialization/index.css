@@ -1,17 +1,6 @@
 .speciali-wrapper {
   position: relative;
 }
-/* .speciali-wrapper::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  left: calc(-0.5 * calc(100vw - var(--page-container-max-w)));
-  width: 99vw;
-  top: 0;
-  height: 100%;
-  background-color: var(--clr-1);
-  z-index: -1;
-} */
 
 .features-card::before {
   content: '';

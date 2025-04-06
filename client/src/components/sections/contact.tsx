@@ -66,7 +66,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-0 bg-[var(--clr-3)] ">
+    <section id="contact" className="py-0 bg-[var(--clr-yellow-light)] ">
       <div className="container max-w-[var(--page-container-max-w)] mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="lg:col-span-1">

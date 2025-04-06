@@ -1,15 +1,14 @@
 :root {
-  --clr-1: #3F6F31;
   --clr-blue: #1F2246;
   --clr-blue-hover: #4049ad;
-  --clr-orange: #EA580C;
-  --clr-green: #2A5F1B;
-  --clr-3: #e7f4d5;
+  /* --clr-orange: #EA580C; */
+  /* --clr-green: #2A5F1B; */
   
   --clr-orange-1: #FE3D00;
   --clr-orange-2: #FE6A00;
   --clr-orange-3: #FFA501;
   --clr-yellow: #FBEE6F;
+  --clr-yellow-light: #e7f4d5;
   --clr-white: #F9F8F6;
   --clr-black: #070001;
   

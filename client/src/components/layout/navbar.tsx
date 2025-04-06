@@ -2,14 +2,8 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Leaf, ChevronDown } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 // import Logo from '../../images/LogoDesktop.svg'
-import Logo from '../../images/Logo.png'
+import Logo from '../../images/Logo2.png'
 //@ts-ignore
 import Translator from '../ui/Translator'
 import ScrollProgress from "../common/ScrollProgress";
@@ -36,7 +30,7 @@ const Navbar = () => {
   };
   return (
     <header className="sticky top-0 w-full z-50 bg-background shadow-md">
-      <nav className="navbar container mx-auto px-4 py-2 flex justify-between items-center">
+      <nav className="navbar container mx-auto bg-[var(--clr-white)] px-4 py-2 flex justify-between items-center">
         <div className="flex items-center">
           <Link href="/" className="text-2xl font-heading font-bold text-[var(--clr-orange-1)] flex items-center gap-2">
             {/* <Leaf className="h-6 w-6" />
@@ -44,7 +38,7 @@ const Navbar = () => {
             <img
               src={Logo}
               alt="Logo"
-              className="h-14 "
+              className="h-20 "
             />
           </Link>
         </div>
@@ -65,21 +59,6 @@ const Navbar = () => {
               </Link>
             ))}
             
-            {/* <DropdownMenu>
-              <DropdownMenuTrigger className="text-lg text-orange-800 font-kanit font-medium hover:text-primary transition-colors flex items-center gap-1">
-                More <ChevronDown className="h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                {moreMenuItems.map((item) => (
-                  <DropdownMenuItem key={item.href}>
-                    <Link href={item.href} className="w-full">
-                      {item.label}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu> */}
-
             <div>
             <div className="text-sm cursor-pointer flex items-center gap-2 hover:text-[var(--clr-orange-3)] transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--clr-orange-3)]">

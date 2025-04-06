@@ -11,7 +11,7 @@ import ScrollProgress from "../common/ScrollProgress";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Products", href: "/products" },
-  { label: "About Us", href: "/about" },
+  { label: "About Us", href: "/about-us" },
   { label: "Contact Us", href: "/contact-us" },
 ];
 

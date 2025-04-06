@@ -143,6 +143,11 @@ body {
   z-index: -2;
 }
 
+.hero-para {
+  background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255, 255, 255, 0.232) 0%, rgba(255, 255, 255, 0.105) 51%, rgba(255,255,255,0) 100%);
+}
+
 /* .nav__text-content {
   background-image: url('./images/bg-cow.png');
   background-size: cover;

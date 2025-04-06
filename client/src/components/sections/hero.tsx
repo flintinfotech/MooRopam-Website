@@ -120,7 +120,7 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 pt-20 pb-16 relative z-10">
         <motion.div 
-          className="max-w-2xl text-white"
+          className="max-w-2xl hero-para py-2 text-white"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ 
@@ -129,9 +129,12 @@ const Hero = () => {
             damping: 15
           }}
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-4 drop-shadow-md">
-            Affordable and Innovative Solutions for Cow Health
+          <h1 className="text-4xl md:text-5xl lg:text-4xl font-heading font-bold mb-4 drop-shadow-md">
+          Innovating Dairy Farming for a Sustainable Future
           </h1>
+          <div className="text-2xl md:text-xl font-heading tracking-wider mb-4 drop-shadow-md">
+            Empowering dairy farmers with cutting-edge technology to enhance productivity, health, and efficiency
+          </div>
           {/* <AnimatePresence mode="wait">
             {slides.map((slide, index) => (
               index === currentSlide && (
@@ -159,7 +162,7 @@ const Hero = () => {
               className="bg-[var(--clr-orange-3)] hover:bg-[var(--clr-orange-2)] text-white font-heading font-semibold"
               asChild
             >
-              <Link href="/products">View Our Products</Link>
+              <Link href="/products">Explore Our Products</Link>
             </Button>
             <Button
               size="lg"

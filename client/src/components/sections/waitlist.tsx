@@ -194,7 +194,7 @@ const Waitlist = () => {
                       <Checkbox
                         checked={field.value}
                         onCheckedChange={field.onChange}
-                        className="mt-1 data-[state=checked]:bg-white data-[state=checked]:text-primary"
+                        className="mt-1 data-[state=checked]:bg-white data-[state=checked]:text-[var(--clr-orange-1)]"
                       />
                     </FormControl>
                     <div className="text-sm space-y-1 leading-none text-left">
@@ -209,7 +209,7 @@ const Waitlist = () => {
               
               <Button 
                 type="submit" 
-                className="bg-white text-primary hover:bg-gray-100 font-heading font-semibold px-8 py-3"
+                className="bg-white text-[var(--clr-orange-1)] hover:bg-gray-100 font-heading font-semibold px-8 py-3"
                 disabled={waitlistMutation.isPending}
               >
                 {waitlistMutation.isPending ? "Submitting..." : "Join the Waitlist"}

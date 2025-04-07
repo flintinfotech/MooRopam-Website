@@ -65,12 +65,12 @@ const Specialization = () => {
       </Fade>
 
       <Fade triggerOnce delay={700}>
-        <Button className="my-6 bg-[var(--clr-orange-3)] hover:bg-[var(--clr-orange-2)] text-white font-heading font-semibold" size="lg" asChild>
+        <Button className="mt-6 bg-[var(--clr-orange-3)] hover:bg-[var(--clr-orange-2)] text-white font-heading font-semibold" size="lg" asChild>
           <Link href="/about-us">Learn More</Link>
         </Button>
       </Fade>
 
-      <div className='features-content '>
+      {/* <div className='features-content '>
         <div className='flex gap-2 mx-2 justify-between'>
           {
             json.map((item: any, index: number) => {
@@ -104,7 +104,7 @@ const Specialization = () => {
             })
           }
         </div>
-      </div>
+      </div> */}
     </div>
   </div>
 }

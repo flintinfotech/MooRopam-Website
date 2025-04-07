@@ -9,6 +9,8 @@ import MastiSenseImg from '../../images/ProductMastisense.png'
 import SiloRopanImg from '../../images/ProductSiloRopan.png'
 import './products.css'
 import Title from "../common/Title";
+// import intro from "../../images/product-intro.mp4"
+import intro from "../../images/bg-white-video.mp4"
 
 // Default products to display if API fetch fails
 const defaultProducts = [
@@ -16,7 +18,7 @@ const defaultProducts = [
     id: 1,
     name: "MastiSense<sup>TM</sup>",
     price: "$45.99",
-    description: "MastiSense<sup>TM</sup> detects bovine mastitis - a bacterial infection at an early stage.",
+    description: "An advanced bovine mastitis detection device that ensures healthier cows and better milk quality.",
     image: MastiSenseImg,
     tags: ["Affordable", "Ease of use"]
   },
@@ -24,7 +26,7 @@ const defaultProducts = [
     id: 2,
     name: "SiloRopan<sup>TM</sup>",
     price: "$52.99",
-    description: "Silage is a type of fodder prepared by ensiling of green foliage crops.",
+    description: "A scientifically formulated bacterial culture that enhances silage fermentation for optimal nutrition retention.",
     image: SiloRopanImg,
     tags: ["Immune Support", "Growth", "Digestive Health"]
   },
@@ -60,8 +62,33 @@ const productCard = {
 const imageAnimation = {
   hover: {
     scale: 1.05,
-    transition: { duration: 0.4 }
-  }
+  },
+  transition: { type: "spring", stiffness: 400, damping: 10 }
+};
+
+const TypewriterText = ({ text }: { text: string }) => {
+  return (
+    <motion.p
+      className="text-left text-blue-900 mx-auto"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      {text.split('').map((char, index) => (
+        <motion.span
+          key={index}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 0.1,
+            delay: index * 0.05,
+          }}
+        >
+          {char}
+        </motion.span>
+      ))}
+    </motion.p>
+  );
 };
 
 const Products = ({ products = [] }: ProductsProps) => {
@@ -69,7 +96,7 @@ const Products = ({ products = [] }: ProductsProps) => {
   const displayProducts = products.length > 0 ? products : defaultProducts;
 
   return (
-    <section id="products" className="products-wrapper relative px-5 py-1 md:py-5 mt-2 md:mt-10 bg-orasnge-200">
+    <section id="products" className="products-wrapper relative px-5 py-1 md:py-5 mt-2 md:mt-10">
       <div className="products__bg"></div>
       <div className="max-w-[var(--page-container-max-w)] mx-auto">
 
@@ -84,15 +111,16 @@ const Products = ({ products = [] }: ProductsProps) => {
             {/* <h2 className="text-3xl font-heading text-[var(--clr-blue)] font-bold mb-4">Our Premium Products</h2> */}
             <Title
               title={'Our Premium Products'}
-              titleClassname={'text-[var(--clr-blue)]'}
+              titleClassname={'text-[var(--clr-black)]'}
             />
-            <p className="text-lg text-blue-900 max-w-3xl mx-auto">
-              Specially formulated to meet the unique nutritional needs of your cattle at every stage of development.
-            </p>
+            {/* <TypewriterText text="" /> */}
+            <p>
+            Specially formulated to meet the unique nutritional needs of your cattle at every stage of development.
+              </p>
           </motion.div>
 
           <motion.div
-            className="flex justify-center gap-8"
+            className="grid grid-cols-[repeat(2,1fr)] justify-center gap-8"
             variants={container}
             initial="hidden"
             whileInView="show"
@@ -101,38 +129,43 @@ const Products = ({ products = [] }: ProductsProps) => {
             {displayProducts.map((product, index) => (
               <motion.div
                 key={product.id}
-                className="max-w-[400px]"
+                className="min-w-[400pssx]"
                 variants={productCard}
-                whileHover={{
-                  y: -10,
-                  transition: { type: "spring", stiffness: 400, damping: 10 }
-                }}
+                // whileHover={{
+                //   y: -10,
+                //   transition: { type: "spring", stiffness: 400, damping: 10 }
+                // }}
               >
-                <Card className="overflow-hidden h-full shadow-md hover:shadow-xl transition-shadow duration-300">
-                  <div className="h-56 overflow-hidden">
+                <Card className="overflow-hidden relative grid grid-cols-[250px_1fr] h-full shadow-md hover:shadow-xl transition-shadow duration-300">
+                
+                    <video
+                      src={intro}
+                      autoPlay
+                      // playsInline
+                      muted
+                      loop
+                      controls={false}
+                      className="rounded-lg absolute border-0 top-0 left-0 w-[100%] h-[100%] object-cover z-[-1]"
+                    />
+                  <div className="overflow-hidden">
                     <motion.img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full  object-cover"
                       variants={imageAnimation}
                       whileHover="hover"
                     />
                   </div>
-                  <CardContent className="p-6">
-                    <div className="flex justify-between items-center mb-3">
+                  <CardContent className="p-6 relative">
+                    <div className="mb-3">
                       <h3 className="text-2xl tracking-wider font-bold w-full text-center font-onest">{
                           parse(product.name)
                       }</h3>
-                      {/* <motion.span
-                        className="text-[#8c6e31] font-semibold"
-                        initial={{ opacity: 0, x: -10 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.3 + (index * 0.1) }}
-                      >
-                        {product.price}
-                      </motion.span> */}
                     </div>
-                    <p className="text-muted-foreground mb-4">{parse(product.description)}</p>
+                    {/* <p className="text-muted-foreground mb-4">{parse(product.description)}</p> */}
+                    <motion.div className="text-center mb-4">
+                      <TypewriterText text={parse(product.description) as string} />
+                    </motion.div>
                     <motion.div
                       className="flex flex-wrap gap-2 mb-4"
                       initial={{ opacity: 0 }}
@@ -149,20 +182,32 @@ const Products = ({ products = [] }: ProductsProps) => {
                         </Badge>
                       ))}
                     </motion.div>
-                  </CardContent>
-                  <CardFooter className="p-6 pt-0">
+
                     <Button
-                      className="w-full text-white bg-[var(--clr-orange-3)] hover:bg-[var(--clr-orange-2)]"
+                      className="w-full text-white text-xl py-6 rounded-none cursor-pointer bg-[var(--clr-orange-3)] hover:bg-[var(--clr-orange-2)]"
                       asChild
                     >
                       <motion.div
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.98 }}
                       >
-                        Learn More
+                        View Product
                       </motion.div>
                     </Button>
-                  </CardFooter>
+                  </CardContent>
+                  {/* <CardFooter className="p-0 pt-0">
+                    <Button
+                      className="w-full text-white text-xl py-6 rounded-none cursor-pointer bg-[var(--clr-orange-3)] hover:bg-[var(--clr-orange-2)]"
+                      asChild
+                    >
+                      <motion.div
+                        whileHover={{ scale: 1.03 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        View Product
+                      </motion.div>
+                    </Button>
+                  </CardFooter> */}
                 </Card>
               </motion.div>
             ))}
@@ -177,7 +222,7 @@ const Products = ({ products = [] }: ProductsProps) => {
           >
             <Button
               variant="link"
-              className="font-heading font-semibold text-[var(--clr-orange-1)] hover:text-[var(--clr-orange-3)] transition-colors"
+              className="font-heading text-2xl font-semibold text-white hover:text-gray-200 cursor-pointer transition-colors"
               asChild
             >
               <motion.div whileHover={{ x: 5 }} whileTap={{ x: -2 }}>

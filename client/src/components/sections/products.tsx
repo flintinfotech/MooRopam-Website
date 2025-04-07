@@ -68,7 +68,7 @@ const imageAnimation = {
 const TypewriterText = ({ text }: { text: string }) => {
   return (
     <motion.p
-      className="text-left text-blue-900 mx-auto"
+      className="text-left text-blue-900 mx-auto text-lg"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -142,17 +142,17 @@ const Products = ({ products = [] }: ProductsProps) => {
                     controls={false}
                     className="rounded-lg absolute top-[0] left-[0] w-[100%] h-[100%] object-cover z-[-1]"
                   />
-                  <div className="overflow-hidden">
+                  <div className="overflow-hidden flex justify-center items-center">
                     <motion.img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full  object-cover"
+                      className="w-[90%] h-[90%] object-center object-cover"
                       variants={imageAnimation}
                       whileHover="hover"
                     />
                   </div>
-                  <CardContent className="p-6 relative ">
-                    <div className="product-card-content p-4 border-orange-400 border-[5px] border-t-0 border-r-0 border-b-0 h-full flex flex-col ">
+                  <CardContent className="p-3 relative ">
+                    <div className="product-card-content px-4 pt-2 border-orange-400 border-[5px] border-t-0 border-r-0 border-b-0 h-full flex flex-col ">
                       <div className="mb-3">
                         <h3 className="text-3xl tracking-wider font-extrabold w-full text-center font-onest">{
                           parse(product.name)
@@ -181,7 +181,7 @@ const Products = ({ products = [] }: ProductsProps) => {
 
                       <div className="flex flex-col justify-end" style={{ flexGrow: 1 }}>
                         <Button
-                          className="w-full text-white text-xl py-6 rounded-none cursor-pointer bg-[var(--clr-orange-3)] hover:bg-[var(--clr-orange-2)]"
+                          className="w-full text-white text-lg py-4 rounded-none cursor-pointer bg-[var(--clr-orange-3)] hover:bg-[var(--clr-orange-2)]"
                           asChild
                         >
                           <motion.div

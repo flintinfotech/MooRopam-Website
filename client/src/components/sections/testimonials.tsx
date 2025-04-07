@@ -1,6 +1,27 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import Title from "../common/Title";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1
+  }
+};
 
 const testimonials = [
   {
@@ -23,7 +44,14 @@ const testimonials = [
     initials: "MT",
     rating: 4.5,
     text: "What impressed me most was the customer support. Their team helped me tailor a feeding program specific to my herd's needs. Results were visible within 3 weeks."
-  }
+  },
+  {
+    name: "RICHIe Davidson",
+    company: "Family Farms, Texas",
+    initials: "JD",
+    rating: 4,
+    text: "Fabulous! increased weight gain, and my veterinary costs are down nearly 30%."
+  },
 ];
 
 const Testimonials = () => {
@@ -42,38 +70,64 @@ const Testimonials = () => {
             Don't just take our word for it. Here's what farmers across the country have experienced with MooRopan products.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-white shadow-md">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-amber-500">
-                    {Array.from({ length: Math.floor(testimonial.rating) }).map((_, i) => (
-                      <Star key={i} className="fill-current h-5 w-5" />
-                    ))}
-                    {testimonial.rating % 1 > 0 && (
-                      <Star className="fill-current h-5 w-5 stroke-current" />
-                    )}
-                  </div>
-                </div>
-                <p className="italic mb-6">
-                  "{testimonial.text}"
-                </p>
-                <div className="flex items-center">
-                  <div className="mr-4">
-                    <div className="w-12 h-12 bg-[var(--clr-yellow)] rounded-full flex items-center justify-center text-[var(--clr-orange-1)] font-bold">
-                      {testimonial.initials}
+
+        <div className=" ">
+          <Carousel
+            swipeable={false}
+            draggable={false}
+            showDots={true}
+            responsive={responsive}
+            ssr={true} // means to render carousel on server-side.
+            infinite={true}
+            autoPlay={false}
+            autoPlaySpeed={5000}
+            keyBoardControl={true}
+            customTransition="all .5"
+            transitionDuration={500}
+            // containerClass="carousel-container"
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            // deviceType={this.props.deviceType}
+            // dotListClass="custom-dot-list-style"
+            // itemClass="carousel-item-padding-40-px"
+          >
+            {testimonials.map((testimonial, index) => (
+
+              <Card key={index} className="bg-white shrink-0 shadow-md w-[400px]">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <div className="flex text-amber-500">
+                      {Array.from({ length: Math.floor(testimonial.rating) }).map((_, i) => (
+                        <Star key={i} className="fill-current h-5 w-5" />
+                      ))}
+                      {testimonial.rating % 1 > 0 && (
+                        <Star className="fill-current h-5 w-5 stroke-current" />
+                      )}
                     </div>
                   </div>
-                  <div>
-                    <h4 className="font-heading font-semibold">{testimonial.name}</h4>
-                    <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+                  <p className="italic mb-6 min-h-[150px] line-clamp-5">
+                    "{testimonial.text}"
+                  </p>
+                  <div className="bottom">
+
+                    <div className="flex items-center">
+                      <div className="mr-4">
+                        <div className="w-12 h-12 bg-[var(--clr-yellow)] rounded-full flex items-center justify-center text-[var(--clr-orange-1)] font-bold">
+                          {testimonial.initials}
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="font-heading font-semibold">{testimonial.name}</h4>
+                        <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+                      </div>
+                    </div>
+
+                    <div></div>
+
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                </CardContent>
+              </Card>
+            ))}
+          </Carousel>
         </div>
       </div>
     </section>

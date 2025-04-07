@@ -9,7 +9,6 @@ import MastiSenseImg from '../../images/ProductMastisense.png'
 import SiloRopanImg from '../../images/ProductSiloRopan.png'
 import './products.css'
 import Title from "../common/Title";
-// import intro from "../../images/product-intro.mp4"
 import intro from "../../images/bg-white-video.mp4"
 
 // Default products to display if API fetch fails
@@ -129,24 +128,20 @@ const Products = ({ products = [] }: ProductsProps) => {
             {displayProducts.map((product, index) => (
               <motion.div
                 key={product.id}
-                className="min-w-[400pssx]"
+                className="overflow-hidden"
                 variants={productCard}
-                // whileHover={{
-                //   y: -10,
-                //   transition: { type: "spring", stiffness: 400, damping: 10 }
-                // }}
               >
-                <Card className="overflow-hidden relative grid grid-cols-[250px_1fr] h-full shadow-md hover:shadow-xl transition-shadow duration-300">
-                
-                    <video
-                      src={intro}
-                      autoPlay
-                      // playsInline
-                      muted
-                      loop
-                      controls={false}
-                      className="rounded-lg absolute border-0 top-0 left-0 w-[100%] h-[100%] object-cover z-[-1]"
-                    />
+                <Card className="overflow-hidden max-w-[calc(100% - 10px)]  relative grid grid-cols-[250px_1fr] h-full sshadow-md hover:shadow-xl transition-shadow duration-300">
+
+                  <video
+                    src={intro}
+                    autoPlay
+                    // playsInline
+                    muted
+                    loop
+                    controls={false}
+                    className="rounded-lg absolute top-[0] left-[0] w-[100%] h-[100%] object-cover z-[-1]"
+                  />
                   <div className="overflow-hidden">
                     <motion.img
                       src={product.image}
@@ -156,58 +151,49 @@ const Products = ({ products = [] }: ProductsProps) => {
                       whileHover="hover"
                     />
                   </div>
-                  <CardContent className="p-6 relative">
-                    <div className="mb-3">
-                      <h3 className="text-2xl tracking-wider font-bold w-full text-center font-onest">{
+                  <CardContent className="p-6 relative ">
+                    <div className="product-card-content p-4 border-orange-400 border-[5px] border-t-0 border-r-0 border-b-0 h-full flex flex-col ">
+                      <div className="mb-3">
+                        <h3 className="text-3xl tracking-wider font-extrabold w-full text-center font-onest">{
                           parse(product.name)
-                      }</h3>
-                    </div>
-                    {/* <p className="text-muted-foreground mb-4">{parse(product.description)}</p> */}
-                    <motion.div className="text-center mb-4">
-                      <TypewriterText text={parse(product.description) as string} />
-                    </motion.div>
-                    <motion.div
-                      className="flex flex-wrap gap-2 mb-4"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 0.5 + (index * 0.1) }}
-                    >
-                      {product.tags.map((tag: string, idx: number) => (
-                        <Badge
-                          key={idx}
-                          variant="outline"
-                          className="bg-[var(--clr-yellow)] border-[var(--clr-blue)]"
-                        >
-                          {tag}
-                        </Badge>
-                      ))}
-                    </motion.div>
+                        }</h3>
+                      </div>
+                      {/* <p className="text-muted-foreground mb-4">{parse(product.description)}</p> */}
+                      <motion.div className="text-center mb-4">
+                        <TypewriterText text={parse(product.description) as string} />
+                      </motion.div>
+                      <motion.div
+                        className="flex flex-wrap gap-2 mb-4"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.5 + (index * 0.1) }}
+                      >
+                        {product.tags.map((tag: string, idx: number) => (
+                          <Badge
+                            key={idx}
+                            variant="outline"
+                            className="bg-[var(--clr-yellow)] border-[var(--clr-blue)]"
+                          >
+                            {tag}
+                          </Badge>
+                        ))}
+                      </motion.div>
 
-                    <Button
-                      className="w-full text-white text-xl py-6 rounded-none cursor-pointer bg-[var(--clr-orange-3)] hover:bg-[var(--clr-orange-2)]"
-                      asChild
-                    >
-                      <motion.div
-                        whileHover={{ scale: 1.03 }}
-                        whileTap={{ scale: 0.98 }}
-                      >
-                        View Product
-                      </motion.div>
-                    </Button>
+                      <div className="flex flex-col justify-end" style={{ flexGrow: 1 }}>
+                        <Button
+                          className="w-full text-white text-xl py-6 rounded-none cursor-pointer bg-[var(--clr-orange-3)] hover:bg-[var(--clr-orange-2)]"
+                          asChild
+                        >
+                          <motion.div
+                            whileHover={{ scale: 1.03 }}
+                            whileTap={{ scale: 0.98 }}
+                          >
+                            View Product
+                          </motion.div>
+                        </Button>
+                      </div>
+                    </div>
                   </CardContent>
-                  {/* <CardFooter className="p-0 pt-0">
-                    <Button
-                      className="w-full text-white text-xl py-6 rounded-none cursor-pointer bg-[var(--clr-orange-3)] hover:bg-[var(--clr-orange-2)]"
-                      asChild
-                    >
-                      <motion.div
-                        whileHover={{ scale: 1.03 }}
-                        whileTap={{ scale: 0.98 }}
-                      >
-                        View Product
-                      </motion.div>
-                    </Button>
-                  </CardFooter> */}
                 </Card>
               </motion.div>
             ))}

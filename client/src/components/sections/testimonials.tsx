@@ -8,16 +8,17 @@ import 'react-multi-carousel/lib/styles.css';
 // //@ts-ignore
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
+import quote from '../../images/blockquote.svg'
 
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
-    items: 5
+    items: 2
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3
+    items: 2
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -76,7 +77,8 @@ const testimonials = [
     company: "Meadow Creek Dairy, Wisconsin",
     initials: "SW",
     rating: 5,
-    text: "The ProducerPlus formula has made a remarkable difference in our dairy operation. Milk production is up 15%, and the quality metrics have never been better."
+    text: "The ProducerPlus formula has made a remarkable difference in our dairy operation. Milk production is up 15%, and the quality metrics have never been better.",
+    img: "https://picsum.photos/200/300"
   },
   {
     name: "Michael Thomas",
@@ -97,7 +99,7 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <section id="testimonials" className="py-16 bg-amber-50">
-      <div className="containesr max-w-[var(--page-container-max-w)] mx-auto px-5">
+      <div className="containesr max-w-[var(--page-container-max-w)] mx-auto px-5 py-3">
         <div className="text-center mb-12">
           {/* <h2 className="text-3xl font-heading font-bold mb-4">What Farmers Are Saying</h2> */}
           <Title
@@ -126,47 +128,77 @@ const Testimonials = () => {
             transitionDuration={500}
             // containerClass="carousel-container"
             removeArrowOnDeviceType={["tablet", "mobile"]}
-            // deviceType={this.props.deviceType}
-            // dotListClass="custom-dot-list-style"
-            // itemClass="carousel-item-padding-40-px"
+          // deviceType={this.props.deviceType}
+          // dotListClass="custom-dot-list-style"
+          // itemClass="carousel-item-padding-40-px"
           >
-           {/* <Slider {...settings}> */}
+            {/* <Slider {...settings}> */}
             {testimonials.map((testimonial, index) => (
 
-              <Card key={index} className="bg-white shrink-0 shadow-md w-[400px]">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="flex text-amber-500">
-                      {Array.from({ length: Math.floor(testimonial.rating) }).map((_, i) => (
-                        <Star key={i} className="fill-current h-5 w-5" />
-                      ))}
-                      {testimonial.rating % 1 > 0 && (
-                        <Star className="fill-current h-5 w-5 stroke-current" />
-                      )}
-                    </div>
-                  </div>
-                  <p className="italic mb-6 min-h-[150px] line-clamp-5">
-                    "{testimonial.text}"
-                  </p>
-                  <div className="bottom">
+              <div key={index} className="overflow-visible p-4 relative">
 
-                    <div className="flex items-center">
-                      <div className="mr-4">
-                        <div className="w-12 h-12 bg-[var(--clr-yellow)] rounded-full flex items-center justify-center text-[var(--clr-orange-1)] font-bold">
-                          {testimonial.initials}
+                <img
+                  src={quote}
+                  className="quote-before font-red w-10 absolute z-[2] top-0 left-2"
+                />
+
+                <img
+                  src={quote}
+                  className="quote-after rotate-180 w-10 absolute z-[2] bottom-[1%] right-0"
+                />
+
+                <Card className="testm-card-main relative  bg-white shrink-0 min-h-[300px] w-[auto]">
+
+
+                  <div className="absolute w-[100%] h-[2px] bg-gradient-to-l from-black to-transparent -right-2 -top-2"></div>
+                  <div className="absolute w-[100%] h-[2px] bg-gradient-to-r from-black to-transparent -left-2 -bottom-2"></div>
+                  <div className="absolute w-[2px] h-[100%] bg-gradient-to-b from-black to-transparent -right-2 -top-2"></div>
+                  <div className="absolute w-[2px] h-[100%] bg-gradient-to-t from-black to-transparent -left-2 -bottom-2"></div>
+                  <CardContent className="flex">
+                    <section className="left-section p-6 flex flex-col">
+
+                      <div className="flex items-center mb-4">
+                        <div className="flex justify-end text-amber-500">
+                          {Array.from({ length: Math.floor(testimonial.rating) }).map((_, i) => (
+                            <Star key={i} className="fill-current h-5 w-5" />
+                          ))}
+                          {testimonial.rating % 1 > 0 && (
+                            <Star className="fill-current h-5 w-5 stroke-current" />
+                          )}
                         </div>
                       </div>
-                      <div>
-                        <h4 className="font-heading font-semibold">{testimonial.name}</h4>
-                        <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+                      <p className="italic mb-6 line-clamp-5">
+                        "{testimonial.text}"
+                      </p>
+                      <div className="bottom mt-auto">
+
+                        <div className="flex items-center">
+                          <div className="mr-4">
+                            <div className="w-12 h-12 bg-[var(--clr-yellow)] rounded-full flex items-center justify-center text-[var(--clr-orange-1)] font-bold">
+                              {testimonial.initials}
+                            </div>
+                          </div>
+                          <div>
+                            <h4 className="font-heading font-semibold">{testimonial.name}</h4>
+                            <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+                          </div>
+                        </div>
+
+                        <div></div>
+
                       </div>
-                    </div>
 
-                    <div></div>
+                    </section>
+                    {testimonial?.img && <section className="right-image w-full max-h-[300px]">
+                        <img
+                          src={testimonial?.img}
+                          className="object-cover object-center min-w-[250px] h-full"
+                        />
+                    </section>}
+                  </CardContent>
+                </Card>
 
-                  </div>
-                </CardContent>
-              </Card>
+              </div>
             ))}
           </Carousel>
           {/* </Slider> */}

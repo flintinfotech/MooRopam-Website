@@ -51,7 +51,7 @@
 .aboutp__points li::before{
   content: '➣';
   position: absolute;
-  top: 0;
+  top: -3px;
   left: -20px;
   width: 20px;
   height: 20px;
@@ -68,6 +68,15 @@
   transform-origin: center;
   animation: appear 1s linear;
   animation-delay: 50ms;
+}
+
+.react-multi-carousel-list {
+  padding-bottom: 15px;
+}
+
+.react-multi-carousel-dot-list  {
+  /* position: relative; */
+  bottom: -2px;
 }
 
 @keyframes swirl {
@@ -111,7 +120,8 @@
 }
 
 body {
-  /* background-color: #e1ffbc; */
+  margin: 0;
+  padding: 0;
 }
 
 .navbar {
@@ -119,23 +129,25 @@ body {
   overflow: hidden;
 }
 
-.navbar::before {
+.nav-bg::before {
   content: '';
   position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
   background-image: url('./images/orange-wave-no-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center -113px;
+  background-position: center 0;
   filter: blur(2px);
   z-index: -1;
 }
-.navbar::after {
+.nav-bg::after {
   content: '';
   position: absolute;
   width: 100%;
   height: 100%;
+  top: -3px;
   background-color: var(--clr-white);
   background-size: cover;
   background-position: center;

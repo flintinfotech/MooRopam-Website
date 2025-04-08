@@ -1,4 +1,4 @@
-import { Leaf } from "lucide-react";
+import { Leaf, Linkedin } from "lucide-react";
 import { Link } from "wouter";
 import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 
@@ -12,20 +12,17 @@ const Footer = () => {
               <Leaf className="mr-2 h-5 w-5" /> MooRopan<sup className="text-[10px]">TM</sup>
             </h3>
             <p className="mb-4 text-gray-300 max-w-lg">
-              Premium cattle feed solutions based on science, not tradition. Improving animal health and farm profitability.
+              Redefining the dairy farming through innovation.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                <Facebook className="h-5 w-5" />
+                <Youtube className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Linkedin className="h-5 w-5" />
               </a>
               <a href="#" className="text-gray-300 hover:text-white transition-colors">
                 <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                <Youtube className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -52,8 +49,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-heading font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
-              <li><a href="#about" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+              <li><Link href="/" className="text-gray-300 hover:text-white transition-colors">Home</Link></li>
+              <li><Link href="/about-us" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/products" className="text-gray-300 hover:text-white transition-colors">Products</Link></li>
+              <li><Link href="/contact-us" className="text-gray-300 hover:text-white transition-colors">Contact Us</Link></li>
             </ul>
           </div>
         </div>
